@@ -2,9 +2,9 @@ const mongoose=require("mongoose")
 mongoose.set("strictQuery",false)
 
 const userSchema=mongoose.Schema({
-    name:String,
-    email:String,
-    password:String
+    name:{ type: String, required: true },
+    email:{ type: String, required: true },
+    password:{ type: String, required: true }
 },{
     versionKey:false
 })

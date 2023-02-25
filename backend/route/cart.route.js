@@ -9,16 +9,23 @@ cartRouter.get("/",async(req,res)=>{
     res.send(cartitem)
 })
 cartRouter.post("/addnew",async(req,res)=>{
-    let title = req.body.title;
-    let pro = await ProductModel.find({title})
-    if(pro.length!==0 && pro[0].title == title){
-        res.send({"msg":"Product already present"});
+    try {
+        let title = req.body.title;
+        let user = req.body.user
+        let pro = await CartModel.find({title})
+        if(pro.length!==0 && pro[0].title == title && pro[0].user == user){
+            res.send({"msg":"Product already present"});
+        }
+        else{
+            req.body.quantity=1;
+            let newpro = new CartModel(req.body)
+            await newpro.save();
+            res.send({"msg":"Product Added"})
+        }
+    } catch (error) {
+        res.send({"msg":`${error}`})
     }
-    else{
-        let newpro = new CartModel(req.body)
-        await newpro.save();
-        res.send({"msg":"Product Added"})
-    }
+    
 })
 cartRouter.patch("/update/:id",async(req,res)=>{
     const Id = req.params.id;
@@ -32,9 +39,14 @@ cartRouter.patch("/update/:id",async(req,res)=>{
 })
 
 cartRouter.delete("/delete/:id",async(req,res)=>{
-    let id=req.params.id;
-    const cartitem= await CartModel.findByIdAndDelete(id)
-    res.send({"msg":"Product removed from cart"})
+    try {
+        let id=req.params.id;
+        await CartModel.findByIdAndDelete(id)
+        res.send({"msg":"Product removed from cart"})
+    } catch (error) {
+        res.send({"msg":"Something went wrong","Error":err})
+    }
+   
 })
 
 module.exports={
