@@ -2,16 +2,16 @@ const mongoose=require("mongoose")
 mongoose.set("strictQuery",false)
 
 const productSchema=mongoose.Schema({
-    title:String,
-    imageURL:String,
-    description:String,
-    price:Number,
-    discount:Number,
-    gender:String,
-    category:String,
-    subCategory:String,
-    brand:String,
-    color:String
+    title:{ type: String, required: true },
+    imageURL:{ type: String, required: true },
+    description:{ type: String, required: true },
+    price:{ type: Number, required: true },
+    discount:{ type: Number, required: true },
+    gender:{ type: String, required: true },
+    category:{ type: String, required: true },
+    subCategory:{ type: String, required: true },
+    brand:{ type: String, required: true },
+    color:{ type: String, required: true }
 },{
     versionKey:false
 })

@@ -13,8 +13,8 @@ userRouter.get("/alluser",async(req,res)=>{
 userRouter.post("/register",async(req,res)=>{
     const {name,email,password}=req.body;
     const reguser=await UserModel.find({email})
-    if(reguser[0].email == email){
-        res.send({"msg":"Already registered, go to Sign In"})
+    if(reguser.length!==0 && reguser[0].email == req.body.email){
+        res.send({"msg":"Already registered, go to Log In"})
     }
     else{
         try {
@@ -43,7 +43,7 @@ userRouter.post("/login",async(req,res)=>{
         if(user.length>0){
             bcrypt.compare(password, user[0].password,(err,result)=>{
                 if(result){
-                    let token = jwt.sign({userID:user[0]._id},"masai");
+                    let token = jwt.sign({userID:user[0]._id,username:user[0].name},"masai");
                     res.send({"msg":"Login Successful","token":token})
                 }
                 else if(result == false){

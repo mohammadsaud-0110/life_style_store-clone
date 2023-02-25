@@ -55,17 +55,19 @@
     height: 20px;
 }
 
-.loginbtn{
+.loginbtn,.cartbtn,.favoritebtn{
     width: 30px;
     height: 30px;
-    
+    margin: 0px 10px;
     border: none;
     background-color: rgb(247,248,247);
 }
-.loginbtn>img{
+.login-div img{
     width: 30px;
-    height: 30px;   
+    height: 30px;
+    cursor: pointer;
 }
+
 
 /* ---------------slider-------------------------------- */
 .poster{

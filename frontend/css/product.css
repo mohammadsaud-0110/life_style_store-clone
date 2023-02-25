@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.black-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 100px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+.nav{
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(247,248,247);
+}
+.logo-div{
+    width: 200px;
+}
+.logo-div img{
+    width: 200px;
+}
+.category-div button{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    background-color: rgb(247,248,247);
+    padding: 0px 20px;
+}
+.category-div button:hover{
+    color: rgb(254,87,87);
+}
+.search-div{
+    background-color: rgb(236,237,235);
+    padding: 5px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-div input{
+    width: 90%;
+    padding-left: 15px;
+}
+.search-div input,button{
+    border: none;
+    background-color: rgb(236,237,235);
+    height: 30px;
+}
+.search-div img{
+    width: 20px;
+    height: 20px;
+}
+
+.loginbtn,.cartbtn,.favoritebtn{
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+    border: none;
+    background-color: rgb(247,248,247);
+}
+.login-div img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/* -------------------filter------------------------ */
+.option-div{
+    width: 100%;
+    margin: 40px 0px;
+    padding: 25px 0px;
+    background-color: rgb(247,248,247);
+}
+.option-div-child{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,250px);
+    gap: 15px;
+}
+.option-div-child>select{
+    padding: 8px;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(53, 53, 53);
+}
+
+
+/* ------------------container------------------ */
+
+#container{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+#container>div{
+    overflow: hidden;
+    margin: 0 auto;
+}
+#container>div>div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+#container img{
+    width: 100%;
+    margin-bottom: 5px;
+    transition: 0.3s all ease-in-out;
+}
+#container>div>img:hover{
+    transform: scale(1.1);
+}
