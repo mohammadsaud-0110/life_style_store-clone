@@ -321,3 +321,8 @@ brandoption.addEventListener("change",()=>{
     displayColor(newdata);
   }
 })
+
+document.querySelector(".loginbtn").addEventListener("click",()=>{
+  localStorage.setItem("token","");
+  window.location.href = "/index.html"
+})

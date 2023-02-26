@@ -207,3 +207,8 @@ document.querySelector("form").addEventListener("submit",async(e)=>{
     alert("Order Placed");
     window.location.href = "./homepage.html"
 })
+
+document.querySelector(".loginbtn").addEventListener("click",()=>{
+    localStorage.setItem("token","");
+    window.location.href = "/index.html"
+  })

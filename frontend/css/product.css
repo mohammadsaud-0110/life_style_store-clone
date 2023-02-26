@@ -193,3 +193,109 @@
 #favbtn img:hover{
     transform: scale(1.5);
 }
+
+footer{
+    margin-top: 40px;
+    padding-bottom: 20px;
+    /* background-color: rgb(243, 243, 243); */
+}
+footer .footer1{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer input{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    background-color: rgb(237,237,235);
+    border: none;
+    margin: 0px;
+    margin-top: 10px;
+}
+footer .footer1 #button{
+    background-color: black;
+    color: white;
+    border: 0px;
+    height: 50px;
+    padding: 0px 10px;
+    width: 200px;
+    margin: 0px;
+}
+footer .footer1 button{
+    border: none;
+    margin-top: 10px;
+}
+footer .footer1 img{
+    width: 400px;
+}
+footer hr{
+    width: 85%;
+    margin: auto;
+    height: 1px;
+    background-color:#717171;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+footer .footer-list{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 40px;
+}
+footer .footer-list h4, p{
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+footer .footer-list p{
+    color: rgb(150, 150, 150);
+}
+footer .footer-list p:hover{
+    color: black;
+}
+footer .footer-contact{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    
+}
+footer .footer-contact>.contact{
+    width: 60%;
+}
+footer .footer-contact>.contact>img{
+    width: 100%;
+}
+footer .social-media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+footer .social-media button{
+    border: none;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
+footer .social-media img{
+    width: 30px;
+    height: 30px;
+}
+footer .footer-logo-div{
+    padding: 10px 0px 10px 100px;
+    background-color: rgb(247,248,247);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+footer .footer-logo-div img{
+    width: 200px;
+}
+footer .footer-logo-div p{
+    margin-left: 100px;
+    color: #717171;
+}
