@@ -44,3 +44,8 @@ for(let i=0;i<b.length;i++){
 //   let btn = document.querySelector(".mentbn")
 //   console.log(btn.name)
 // }
+
+document.querySelector(".loginbtn").addEventListener("click",()=>{
+  localStorage.setItem("token","");
+  window.location.href = "/index.html"
+})
