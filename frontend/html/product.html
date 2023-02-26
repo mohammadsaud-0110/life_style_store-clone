@@ -18,10 +18,10 @@
                 <a href="./homepage.html"><img src="../img/brand.png" alt="brand"></a>
             </div>
             <div class="category-div">
-                <a href="./product.html"><button class="womentbn">Women</button></a>
-                <a href="./product.html"><button class="mentbn">Men</button></a>
-                <a href="./product.html"><button class="kidtbn">Kids</button></a>
-                <a href="./product.html"><button class="acctbn">Accessories</button></a>
+                <button name="women" class="womentbn">Women</button>
+                <button name="men" class="mentbn">Men</button>
+                <button class="kidtbn">Kids</button>
+                <button class="acctbn">Accessories</button>
             </div>
             <div class="search-div">
                 <input type="text" placeholder="What are you looking for?">
@@ -29,12 +29,14 @@
             </div>
             <div class="login-div">
                 <a title="Logout" href="../index.html"><button class="loginbtn"><img src="https://cdn-icons-png.flaticon.com/512/747/747545.png" alt=""></button></a>
-                <a title="Cart" href="#"><button class="cartbtn"><img src="https://cdn-icons-png.flaticon.com/512/5337/5337564.png" alt=""></button></a>
-                <a title="Favorites" href="#"><button class="favoritebtn"><img src="https://cdn-icons-png.flaticon.com/512/126/126471.png" alt=""></button></a>
+                <a title="Cart" href="./cart.html"><button class="cartbtn"><img src="https://cdn-icons-png.flaticon.com/512/5337/5337564.png" alt=""></button></a>
+                <a title="Favorites" href=""><button class="favoritebtn"><img src="https://cdn-icons-png.flaticon.com/512/126/126471.png" alt=""></button></a>
             </div>
         </div>
     </div>
-    <div class="category-div">
+    <h2 style="width: 85%; margin: auto; margin-top: 20px;">Select Category</h2>
+    <div class="category-option-div">
+        
         <!--------------- button to be added -------------------------->
     </div>
 
@@ -42,9 +44,9 @@
         <div class="option-div-child">
             <select name="sort" id="select-sort">
                 <option value="" hidden>Sort</option>
-                <option value="">Price: Low To High</option>
-                <option value="">Price: High To Low</option>
-                <option value="">Albhabetical</option>
+                <option value="LTH">Price: Low To High</option>
+                <option value="HTL">Price: High To Low</option>
+                <option value="ATZ">Albhabetical</option>
             </select>
 
             <select name="type" id="select-type">
@@ -61,8 +63,8 @@
 
             <select name="discount" id="select-discount">
                 <option value="" hidden>Discount</option>
-                <option value="">Low To High</option>
-                <option value="">High To Low</option>
+                <option value="LTH">Low To High</option>
+                <option value="HTL">High To Low</option>
             </select>
 
             <select name="" id="">
