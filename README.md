@@ -1,4 +1,3 @@
-# efficient-art-5474
 
 Greetings,
   We noticed that you have reached the README file. So we will take you through the documentation of our project.
